@@ -35,7 +35,7 @@ async function downloadZip (releaseInfo, downloadPath) {
         }
     });
 
-    fs.writeFile(fileName, data, 'binary', err => {
+    fs.writeFile(path.resolve(downloadPath, fileName), data, 'binary', err => {
         if (err) {
             console.error(err);
             throw new Error('problem writing release zip');
