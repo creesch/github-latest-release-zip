@@ -15,17 +15,15 @@ const fs = __nccwpck_require__(747);
 const owner = core.getInput('owner');
 const repo = core.getInput('repo');
 const downloadPath = core.getInput('downloadPath');
-const overrideFileName = core.getInput('fileName');
 const octokit = new Octokit();
 
 async function downloadZip (releaseInfo, downloadPath) {
-    const fileName = overrideFileName || `${releaseInfo.data.name.replace(/[^a-z0-9]/gi, '_')}.zip`;
-
     const zipBallResponse = await octokit.rest.repos.downloadZipballArchive({
         owner,
         repo,
         ref: releaseInfo.data.tag_name,
     });
+    const fileName = zipBallResponse.headers['content-disposition'].match(/filename=(.+)$/)[1];
     const data = Buffer.from(zipBallResponse.data);
 
     fs.mkdirSync(path.resolve(downloadPath), {recursive: true}, err => {
