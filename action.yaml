@@ -12,10 +12,10 @@ inputs:
     required: true
   downloadPath:
     description: 'Path where the zip needs to be save. Should only be directories and not end in a filename'
-    required: true
+    default: './'
 outputs:
   filename:
-    description: 'name of the downloaded zip file'
+    description: 'Name of the downloaded zip file'
 runs:
   using: 'node12'
   main: 'dist/index.js'
