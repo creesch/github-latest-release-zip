@@ -16,6 +16,14 @@ inputs:
 outputs:
   filename:
     description: 'Name of the downloaded zip file'
+  name:
+    description: 'Name of the release'
+  tag_name:
+    description: 'Tag for the release'
+  body:
+    description: 'Markdown body for the release on the github release page'
+  html_url:
+    description: 'Url to the github release page'
 runs:
   using: 'node12'
   main: 'dist/index.js'

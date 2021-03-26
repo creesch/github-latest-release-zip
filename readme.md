@@ -15,5 +15,9 @@ downloadPath | Path where the zip needs to be save. Should only be directories a
 Name | Description 
 --- | --- 
 filename | Name of the downloaded zip file 
+name | Name of the release
+tag_name | Tag for the release
+body | Markdown body for the release on the github release page
+html_url | Url to the github release page
 
 The file itself will be written to the given input path

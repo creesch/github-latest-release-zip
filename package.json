@@ -1,6 +1,6 @@
 {
   "name": "github-latest-release-zip",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Download the latest release zip from another repository for use in other actions",
   "main": "index.js",
   "scripts": {
