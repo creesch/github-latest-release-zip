@@ -6,7 +6,7 @@ const fs = require('fs');
 
 const owner = core.getInput('owner');
 const repo = core.getInput('repo');
-const downloadPath = core.getInput('repo');
+const downloadPath = core.getInput('downloadPath');
 const overrideFileName = core.getInput('fileName');
 const octokit = new Octokit();
 
