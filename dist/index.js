@@ -38,7 +38,8 @@ async function downloadZip (releaseInfo, downloadPath) {
             console.error(err);
             throw new Error('problem writing release zip');
         } else {
-            return fileName;
+            core.setOutput('filename', fileName);
+            return;
         }
     });
 }
