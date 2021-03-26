@@ -26,7 +26,7 @@ async function downloadZip (releaseInfo, downloadPath) {
         repo,
         ref: releaseInfo.data.tag_name,
     });
-    const data = Buffer.from(zipBallResponse);
+    const data = Buffer.from(zipBallResponse.data);
 
     fs.mkdirSync(path.resolve(downloadPath), {recursive: true}, err => {
         if (err) {
