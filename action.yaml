@@ -1,0 +1,24 @@
+name: 'Download Latest Release Zip'
+description: 'Get the latest release from another repository and output that for use in other actions'
+branding:
+  icon: 'anchor'
+  color: 'orange'
+inputs:
+  owner:
+    description: 'The Github user or organization that owns the repository'
+    required: true
+  repo:
+    description: 'The repository name'
+    required: true
+  downloadPath:
+    description: 'Path where the zip needs to be save. Should only be directories and not end in a filename'
+    required: true
+  fileName:
+    description: 'Filename without extension. If provided will be used instead of a release version based filename'
+    required: optional
+outputs:
+  filename:
+    description: 'name of the downloaded zip file'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

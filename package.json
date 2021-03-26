@@ -1,0 +1,19 @@
+{
+  "name": "github-latest-release-zip",
+  "version": "0.1.0",
+  "description": "Download the latest release zip from another repository for use in other actions",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build index.js"
+  },
+  "author": "Creesch",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@octokit/rest": "^18.5.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.27.0",
+    "eslint": "^7.22.0"
+  }
+}

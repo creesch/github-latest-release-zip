@@ -1,0 +1,6 @@
+*.bak
+/.idea
+/.settings
+/.vscode
+/project.json
+/node_modules
