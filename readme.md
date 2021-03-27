@@ -8,7 +8,7 @@ Name | Description | Example
 --- | --- | ---
 owner | The Github user or organization that owns the repository |  creesch
 repo | The repository name | github-latest-release-zip
-downloadPath | Path where the zip needs to be save. Should only be directories and not end in a filename | ./file/goes/here
+downloadPath | Path where the zip needs to be saved. Should only be directories and not end in a filename | ./file/goes/here
 
 ## Output 
 
